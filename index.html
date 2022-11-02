@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT-AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- AXIOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
     <!-- VUE -->
@@ -13,6 +15,39 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- CONTAINER -->
+    <div id="app" class="container">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <!-- TOP -->
+            <section class="user">
+                <div class="user-left">
+                    <img src="img/avatar_1.jpg" alt="avatar_1">
+                    <span>Lawrence</span>
+                </div>
+                <div class="user-settings">
+                    <ul>
+                        <li>
+                            <i class="cl-gray fa-solid fa-circle-notch"></i>
+                        </li>
+                        <li>
+                            <i class="cl-gray fa-solid fa-message"></i>
+                        </li>
+                        <li>
+                            <i class="cl-gray fa-solid fa-ellipsis-vertical"></i>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+        </div>
+        <!-- /SIDEBAR -->
+
+        <div class="active-chat">
+
+        </div>
+    </div>
+    <!-- /CONTAINER -->
+    <script src="js/data.js"></script>
 </body>
 </html>

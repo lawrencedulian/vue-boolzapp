@@ -5,20 +5,39 @@
     box-sizing: border-box;
 }
 
-:root {
-    --bg-top: #009688;
-    --bg-bottom: #D5DBD9;
+ul {
+    list-style-type: none;
 }
 
+img {
+    width: 100%;
+}
+
+/* UTILITIES */
+:root {
+    --bg-turquoise: #009688;
+    --bg-gray: #D5DBD9;
+    --bg-skyblue: #8EDAFC;
+}
+
+.cl-gray {
+    color: gray;
+}
+
+.cl-skyblue {
+    color: var(--bg-skyblue);
+}
+
+/* BODY */
 body {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(
         to top,
-        var(--bg-bottom) 0%,
-        var(--bg-bottom) 85%,
-        var(--bg-top) 85%,
-        var(--bg-top) 100%
+        var(--bg-gray) 0%,
+        var(--bg-gray) 90%,
+        var(--bg-turquoise) 90%,
+        var(--bg-turquoise) 100%
     );
     display: flex;
     justify-content: center;
@@ -27,4 +46,116 @@ body {
     /* FONT */
     font-family: 'Lato', sans-serif;
     font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 80%;
+    height: 95vh;
+
+    display: flex;
+}
+
+
+.sidebar {
+    width: 30%;
+
+    height: 100%;
+    background-color: white;
+}
+
+/* USER */
+.user {
+    height: 60px;
+    padding: .3em;
+    background-color: var(--bg-gray);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* USER LEFT */
+.user-left {  
+    display: flex;
+    align-items: center;
+}
+
+.user-left img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.user-left span {
+    margin-left: .5em;
+    font-size: .8rem;
+}
+/* /USER LEFT */
+
+/* USER SETTINGS */
+/* /USER SETTINGS */
+
+/* NOTIFICATION */
+.notification {
+    height: 70px;
+    padding: 1em;
+    background-color: var(--bg-skyblue);
+
+    display: flex;
+}
+
+.icon-bell {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: white;
+}
+
+.icon-bell i {
+    line-height: 40px;
+}
+
+.text {
+    margin-left: 1em;
+    font-size: .7rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* /NOTIFICATION */
+/* /TOP */
+
+/* BOTTOM */
+.search {
+    width: 100%;
+    padding: .5em;
+
+    display: flex;
+}
+
+.btn-find {
+    width: 40px;
+    height: 30px;
+    border: 1px solid lightgray;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn-find i {
+    line-height: 30px;
+}
+
+.form-find input {
+    width: 290px;
+    height: 30px;
+    border: 1px solid lightgray;
+}
+/* /BOTTOM */
+.active-chat {
+    width: 70%;
+
+    height: 100%;
+    background-color: burlywood;
 }
