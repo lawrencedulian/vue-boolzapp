@@ -1,0 +1,30 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-top: #009688;
+    --bg-bottom: #D5DBD9;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        to top,
+        var(--bg-bottom) 0%,
+        var(--bg-bottom) 85%,
+        var(--bg-top) 85%,
+        var(--bg-top) 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* FONT */
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
