@@ -50,7 +50,27 @@
             </section>
             <!-- /TOP -->
 
-           
+            <!-- BOTTOM -->
+            <!-- FILTER SEARCH-->
+            <section class="search">
+                <div class="btn-find">
+                    <i class=" cl-gray fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="form-find">
+                   <input
+                    type="text" 
+                    id="find-input"
+                    placeholder="   Cerca o inizia una nuova chat"
+                    @keyup.enter="search-word">
+                </div>
+            </section>
+            <!-- /FILTER SEARCH-->
+
+            <!-- CHAT LIST -->
+            <ul class="chatList">
+                <li></li>
+            </ul>
+            <!-- CHAT LIST -->
         </div>
         <!-- /SIDEBAR -->
 
