@@ -16,67 +16,95 @@
 </head>
 <body>
     <!-- CONTAINER -->
-    <div id="app" class="container">
-        <!-- SIDEBAR -->
-        <div class="sidebar">
-            <!-- TOP -->
-            <section class="user">
-                <div class="user-left">
-                    <img src="img/avatar_1.jpg" alt="avatar_1">
-                    <span>Lawrence</span>
-                </div>
-                <div class="user-settings">
+    <div id="app" class="app-container">
+        <div class="container">
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+                <header>
+                    <div class="user-img">
+                        <img class="avatar" src="img/avatar_io.jpg" alt="">
+                        <h5>Username</h5>
+                    </div>
+
+                    <div class="user-actions">
+                        <i class="cl-gray fa-solid fa-circle-notch"></i>
+                        <i class="cl-gray fa-solid fa-message"></i>
+                        <i class="cl-gray fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </header>    
+                
+                <!-- NOTIFICATION -->
+                <section class="notification">
+                    <div class="icon-bell">
+                        <i class="cl-skyblue fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div class="text">
+                        <h5>Ricevi Notifiche di nuovi messaggi</h5>
+                        <a class="cl-gray" href="">Attiva Notifiche Desktop</a>
+                    </div>
+                </section>
+                <!-- /NOTIFICATION -->
+
+                <!-- SEARCH BOX -->
+                <section class="search">
+                    <div class="icon-find">
+                        <i class=" cl-gray fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="box-find">
+                       <input
+                        type="text" 
+                        id="find-input"
+                        placeholder="   Cerca o inizia una nuova chat"
+                        @keyup.enter="search-word">
+                    </div>
+                </section>
+                <!-- /SEARCH BOX -->
+                    
+                <!-- CONTACTS -->
+                <section class="contacts">
                     <ul>
-                        <li>
-                            <i class="cl-gray fa-solid fa-circle-notch"></i>
-                        </li>
-                        <li>
-                            <i class="cl-gray fa-solid fa-message"></i>
-                        </li>
-                        <li>
-                            <i class="cl-gray fa-solid fa-ellipsis-vertical"></i>
+                        <li class="contact" v-for="contact in contacts">
+                            <div class="contact-image">
+                                <img
+                                    class="avatar"
+                                    :src="`img/avatar${contact.avatar}.jpg`"
+                                    :alt="contact.name"
+                                />
+                            </div>
+                            <div class="contact-text">
+                                <div class="contact__user">
+                                    <h3>{{ contact.name }}</h3>
+                                    <p>Ultimo messaggio</p>
+                                  </div>
+                            </div>
+                            <div class="contact-time">
+                                <small>12:00</small>
+                              </div>
                         </li>
                     </ul>
-                </div>
-            </section>
-            <section class="notification">
-                <div class="icon-bell">
-                    <i class="cl-skyblue fa-solid fa-bell-slash"></i>
-                </div>
-                <div class="text">
-                    <h4>Ricevi Notifiche di nuovi messaggi</h4>
-                    <span><a class="cl-gray" href="">Attiva Notifiche Desktop</a></span>
-                </div>
-            </section>
-            <!-- /TOP -->
+                </section>
+                <!-- /CONTACTS -->
+                
+            </div>
+            <!-- /SIDEBAR -->
 
-            <!-- BOTTOM -->
-            <!-- FILTER SEARCH-->
-            <section class="search">
-                <div class="btn-find">
-                    <i class=" cl-gray fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="form-find">
-                   <input
-                    type="text" 
-                    id="find-input"
-                    placeholder="   Cerca o inizia una nuova chat"
-                    @keyup.enter="search-word">
-                </div>
-            </section>
-            <!-- /FILTER SEARCH-->
+            <!-- CHAT -->
+            <div class="main-chat">
+                <header>
+                    <div class="user-img">
+                        <img class="avatar" src="img/avatar_io.jpg" alt="">
+                        <h5>Username</h5>
+                    </div>
 
-            <!-- CHAT LIST -->
-            <ul class="chatList">
-                <li></li>
-            </ul>
-            <!-- CHAT LIST -->
+                    <div class="user-actions">
+                        <i class="cl-gray fa-solid fa-circle-notch"></i>
+                        <i class="cl-gray fa-solid fa-message"></i>
+                        <i class="cl-gray fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </header>             
+            </div>
         </div>
-        <!-- /SIDEBAR -->
-
-        <div class="active-chat">
-
-        </div>
+       
     </div>
     <!-- /CONTAINER -->
     <script src="js/data.js"></script>
