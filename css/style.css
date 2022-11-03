@@ -24,6 +24,7 @@ img {
     --bg-turquoise: #009688;
     --bg-gray: #EAEAEA;
     --bg-skyblue: #8EDAFC;
+    --bg-green: #D5F9BA;
 }
 
 .cl-gray {
@@ -72,8 +73,10 @@ body {
 .sidebar {
     width: 30%;
     height: 100%;
-
     background-color: white;
+
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -188,11 +191,63 @@ header {
 
 /* /SIDEBAR */
 
+/* MESSAGES */
 .main-chat {
     width: 70%;
-    height: 100%;
 
-    background-image: url(/img/mine.jpg) ;
+    display: flex;
+    flex-direction: column;
 }
+
+.messages {
+    width: 100%;
+    padding: 1rem;
+    flex-grow: 1;
+    background-image: url(/img/mine.jpg) ;  
+}
+
+.message {
+    display: flex;
+}
+
+.message-box {
+    min-width: 260px;
+    max-width: 60%;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+.message.sent .message-box{
+    background-color: var(--bg-green);
+}
+
+.message.sent {
+    justify-content: flex-end;
+} 
+
+.message.received .message-box{
+    background-color: white;
+}
+.message.received {
+    justify-content: flex-start;
+}
+/* /MESSAGES */
+
+/* FOOTER */
+.footer-icon {
+    width: 30px;
+}
+
+.type-message {
+  
+    height: 70px;
+    padding: .5em;
+    background-color: lightgray;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+/* /FOOTER */
 
 
