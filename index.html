@@ -99,25 +99,37 @@
                     </div>
 
                     <div class="user-actions">
-                        <i class="cl-gray fa-solid fa-circle-notch"></i>
-                        <i class="cl-gray fa-solid fa-message"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
                         <i class="cl-gray fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </header>     
                 
                 <!-- MESSAGES -->
                 <section class="messages">
-                    <div class="message sent">
+                    <div 
+                        class="message"
+                        v-for= "(message, index) in contacts[currentChat].messages"
+                        :class="`${message.status}`">
                         <div class="message-box">
                             <div class="message-txt">
-                                Ciao          
+                                {{message.message}}
+                            </div>
+                            <div class="message-time">
+                                {{message.date}}
                             </div>
                         </div>
                     </div>
-                    <div class="message received">
+                    <div 
+                        class="message"
+                        v-for= "(message, index) in contacts[currentChat].messages"
+                        :class="`${message.status}`">
                         <div class="message-box">
                             <div class="message-txt">
-                                Ciao
+                                {{message.message}}
+                            </div>
+                            <div class="message-time">
+                                {{message.date}}
                             </div>
                         </div>
                     </div>

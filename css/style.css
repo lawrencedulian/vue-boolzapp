@@ -96,6 +96,7 @@ header {
 
 .user-actions i {
     margin: 0.5em;
+    color: gray;
 }
 
 .user-img h5 {
@@ -215,6 +216,7 @@ header {
     max-width: 60%;
     padding: 1em;
     border-radius: 15px;
+    margin-bottom: 1em;
 }
 
 .message.sent .message-box{
@@ -230,6 +232,14 @@ header {
 }
 .message.received {
     justify-content: flex-start;
+}
+
+.message-time {
+    font-size: .7rem;
+    margin-top: .3em;
+    color: gray;
+
+    text-align: end;
 }
 /* /MESSAGES */
 
