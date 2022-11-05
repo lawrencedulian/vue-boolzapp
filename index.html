@@ -63,7 +63,9 @@
                 <!-- CONTACTS -->
                 <section class="contacts">
                     <ul>
-                        <li class="contact" v-for="contact in contacts">
+                        <li class="contact"
+                            v-for="(contact, index) in contacts"
+                            @click = "changeChat(index)">
                             <div class="contact-image">
                                 <img
                                     class="avatar"
@@ -92,8 +94,8 @@
             <div class="main-chat">
                 <header>
                     <div class="user-img">
-                        <img class="avatar" src="img/avatar_io.jpg" alt="">
-                        <h5>Username</h5>
+                        <img class="avatar" :src="`img/avatar${contacts[currentChat].avatar}.jpg`" alt="">
+                        <h5>{{ contacts[currentChat].name }}</h5>
                     </div>
 
                     <div class="user-actions">

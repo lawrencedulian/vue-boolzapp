@@ -166,7 +166,16 @@ createApp({
                     ],
                 }
             ],
-            currentChat: 0
+            currentChat: 0,
+            chatFilter: "",
+        }
+    },
+
+    methods: {
+        changeChat(index) {
+            this.currentChat = index;
         }
     }
+
+
 }).mount("#app");
