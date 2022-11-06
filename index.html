@@ -10,6 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
     <!-- VUE -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- LUXON -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.3/build/global/luxon.min.js"></script>
     <!-- STYLES -->
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
@@ -53,7 +55,8 @@
                     <div class="box-find">
                        <input
                         type="text" 
-                        id="find-input"
+                        v-model.trim= "newSearch" 
+                        @keyup = "chatSearch"
                         placeholder="   Cerca o inizia una nuova chat">
                     </div>
                 </section>
