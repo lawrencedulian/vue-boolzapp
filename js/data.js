@@ -168,6 +168,7 @@ createApp({
             ],
             currentChat: 0,
             chatFilter: "",
+            newMessage: ""
         }
     },
 
@@ -176,9 +177,39 @@ createApp({
             this.currentChat = index;
         },
 
-        
+        addMessage() {
+            // IF the new message is not empty 
+            if (this.newMessage.length > 0) {
+                // Access to the current chat
+                const allMessages = this.contacts[this.currentChat].messages;
+                // Create new object message 
+                const newMessageObj = {
+                    date: "",
+                    message: this.newMessage,
+                    status: "sent"
+                }
+                // Put this object in allMessages
+                allMessages.push(newMessageObj);
+                console.log(allMessages);
+                // Clear input field
+                this.newMessage = "";
+                // VIEW THE BOT MESSAGE
+                this.addMessageBot();
+            };
+        },
+
+        addMessageBot () {
+            // SET 1 SEC TIMER 
+            setTimeout(() => {
+                // Create new object message
+                const newMessageObj = {
+                    date: "",
+                    message: "ok",
+                    status: "received"
+                };
+                // Put this object in messages Array
+                this.contacts[this.currentChat].messages.push(newMessageObj);
+            }, 1000);
+        }
     }
-
-
-        
 }).mount("#app");
